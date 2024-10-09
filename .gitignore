@@ -1,0 +1,28 @@
+# Front-end
+node_modules/
+build/
+dist/
+.env
+.env.local
+.env.*.local
+.cache/
+.DS_Store
+.eslintcache
+*.log
+
+# Back-end
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+*.sqlite3
+*.log
+config.yaml
+config.local.yaml
+.coverage
+htmlcov/
+.tox/
+.nox/
+pytest_cache/
