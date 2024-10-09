@@ -20,7 +20,7 @@ git clone git@github.com:AleSanchezB/treyo-clone.git
 cd treyo-clone
 ```
 
-### Iniciar entrono
+### Iniciar entorno
 ```
 python -m venv venv
 source venv/bin/activate
