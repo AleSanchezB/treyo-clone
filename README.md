@@ -37,8 +37,11 @@ uvicorn backend.main:app --reload
 ```
 
 ### Iniciar Frontend
+
+En otra terminal:
 ```
 cd frontend
+npm i react
 npm start
 ```
 ---
