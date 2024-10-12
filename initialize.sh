@@ -6,9 +6,21 @@
 python -m venv venv
 source venv/bin/activate
 
-# Initializing backend
-uvicorn backend.main:app --reload &
+# Function to start backend
+start_backend() {
+  cd ../backend
+  python manage.py runserver
+}
 
-# Initializing frontend
-cd frontend
-npm start &
+# Function to start frontend
+start_frontend() {
+  cd frontend
+  npm start
+}
+
+# Run both backend and frontend in parallel
+start_backend &  # Run backend in the background
+start_frontend &  # Run frontend in the background
+
+# Wait for both processes to complete (optional)
+wait
