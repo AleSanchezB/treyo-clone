@@ -9,7 +9,7 @@ def showCompletedTasksPercentage(tickets):
     for ticket in tickets:
         if ticket.getStatus() == True:
             numCompletedTasks += 1
-    values =x [numCompletedTasks, len(tickets) - numCompletedTasks]
+    values = [numCompletedTasks, len(tickets) - numCompletedTasks]
     fig = go.Figure(data=[go.Pie(labels=labels, values=values, hole=.8)])
     fig.update_traces(hoverinfo='label+value', textinfo='percent', textfont_size=12,
                   marker=dict(colors=['SpringGreen', 'Crimson'],
