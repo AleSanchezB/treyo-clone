@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Login from './Login';
+import Register from './Register';
+import Home from './Home';
 
 function App() {
   const [message, setMessage] = useState("");
@@ -15,11 +19,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>{message}</h1>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+      	<Route path="/" element={<Login />} />
+		<Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 

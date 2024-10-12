@@ -28,12 +28,13 @@ source venv/bin/activate
 
 ### Dependencias
 ```
-pip install fastapi uvicorn
+pip install django django django-cors-headers
 ```
 
 ### Iniciar Backend
 ```
-uvicorn backend.main:app --reload
+cd backend
+python manage.py runserver
 ```
 
 ### Iniciar Frontend
